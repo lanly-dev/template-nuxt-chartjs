@@ -13,6 +13,13 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'nuxt/no-cjs-in-config': 'off'
+    'no-console': ['off', 'all'],
+    'nuxt/no-cjs-in-config': 'off',
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always'
+    }],
+    curly: ['off', 'all']
   }
 }

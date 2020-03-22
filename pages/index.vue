@@ -1,12 +1,19 @@
-<template lang="pug">
+<template lang='pug'>
   .container
-    p Helloworld
+    p.custom Helloworld
 </template>
 
 <script>
 
 export default {
-  components: {}
+  components: {},
+  created() {
+    console.log('created')
+  },
+  mounted() {
+    console.log('mounted')
+    this.$axios.$get('/api/test').then(data => console.log(data))
+  }
 }
 </script>
 

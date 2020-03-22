@@ -23,11 +23,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/axios',
+    { src: '~/plugins/inject-client', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -60,7 +63,10 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
-  }
+  },
+  serverMiddleware: [
+    '~/api/index.js'
+  ]
 }
